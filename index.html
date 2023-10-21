@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="script.js" defer></script>
+    <title>Reproductor</title>
+</head>
+
+<body>
+    <div class="container">
+
+        <header>
+            <h1 id="artist-name"></h1>
+            <div class="imagenArtista" id="artist-image"></div>
+            <h2 id="song-title"></h2>
+        </header>
+        <input class="barra" id="progress" type="range" min="0" max="100" value="0">
+        <div class="tiempos">
+            <span id="current-time">0:00</span>
+            <span id="song-duration">0:00</span>
+        </div>
+        <div class="iconos">
+            <div class="media">
+                <p id="random-button" class='bx bx-shuffle'></p>
+                <div class="controles">
+                    <p id="previous-button" class='bx bx-skip-previous'></p>
+                    <p id="play-button" class='bx bx-play'></p>
+                    <p id="pause-button" class='bx bx-pause'></p>
+                    <p id="next-button" class='bx bx-skip-next'></p>
+                </div>
+                <p id="loop-button" class='bx bx-repeat'></p>
+            </div>
+            <div class="volumen">
+                <p id="volume-button" class="bx bxs-volume-full"></p>
+                <input class="barraVolumen" type="range" min="0" max="100" value="50" id="sliderVolumen" />
+            </div>
+        </div>
+        <div class="lista">
+            <div class="song-list-container">
+                <ul id="song-list" class="song-list"></ul>
+            </div>
+            <div class="pagination" id="pagination"></div>
+        </div>
+
+    </div>
+</body>
+
+</html>
