@@ -45,6 +45,7 @@ header {
 .barra,
 .barraVolumen {
   width: 100%;
+  cursor: pointer;
 }
 
 .tiempos {
