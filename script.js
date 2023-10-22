@@ -84,6 +84,7 @@ function toggleMute() {
 }
 
 
+
 playButton.style.display = "inline-block"; // Mostrar el botón de play por defecto
 pauseButton.style.display = "none"; // Ocultar el botón de pause por defecto
 
@@ -115,7 +116,8 @@ volumeSlider.addEventListener("input", () => {
         isMuted = false; // Desactivar el modo silencio si el volumen es mayor que cero
         volumeButton.className = "bx bxs-volume-full";
     }else{
-        volumeButton.className = "bx bxs-volume-mute";
+        isMuted = true; // Activar el modo silencio si el volumen es cero
+        volumeButton.className = "bx bxs-volume-mute"; //camnbia el icono
     }
 });
 
