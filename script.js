@@ -72,13 +72,14 @@ let isMuted = false;
 volumeButton.addEventListener("click", toggleMute);
 function toggleMute() {
     if (isMuted) {
-        audioPlayer.volume = 0.1; // Establecer el volumen al 50% al desmutear
-        volumeSlider.value = 10; // Actualizar el control deslizante de volumen al 50%
-        volumeButton.className = "bx bxs-volume-full";
+        audioPlayer.volume = 0.1; // Establecer el volumen al 10% al desmutear
+        volumeSlider.value = 10; // Actualizar el control deslizante de volumen al 10%
     } else {
+        if (audioPlayer.volume === 0) {
+            volumeButton.className = "bx bxs-volume-mute"; // Cambiar el ícono a volumen silenciado
+        }
         audioPlayer.volume = 0;
         volumeSlider.value = 0; // Actualizar el control deslizante de volumen a 0 al silenciar
-        volumeButton.className = "bx bxs-volume-mute";
     }
     isMuted = !isMuted;
 }
