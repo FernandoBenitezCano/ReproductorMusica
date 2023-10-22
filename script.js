@@ -116,8 +116,8 @@ volumeSlider.addEventListener("input", () => {
         isMuted = false; // Desactivar el modo silencio si el volumen es mayor que cero
         volumeButton.className = "bx bxs-volume-full";
     }else{
-        isMuted = true; // Activar el modo silencio si el volumen es cero
-        volumeButton.className = "bx bxs-volume-mute"; //camnbia el icono
+        isMuted = true; // Desactivar el modo silencio si el volumen es cero
+        volumeButton.className = "bx bxs-volume-mute";//cambia el icono
     }
 });
 
