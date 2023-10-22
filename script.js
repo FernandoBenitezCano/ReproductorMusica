@@ -198,8 +198,8 @@ function showSongsOnPage(page) {
     songListElement.innerHTML = "";
 
     let start = (page - 1) * elementsPerPage;
-    let fin = start + elementsPerPage;
-    let songOnPage = songs.slice(start, fin);
+    let end = start + elementsPerPage;
+    let songOnPage = songs.slice(start, end);
 
     songOnPage.forEach((song, index) => {
         let listItem = document.createElement("li");
