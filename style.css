@@ -1,5 +1,41 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,300;0,400;0,700;1,400&display=swap');
 
+
+
+/* Define variables */
+:root {
+  --main-font: 'IBM Plex Mono', sans-serif;
+  --font-size: 20px;
+  --font-size-small: 15px;
+
+  --container-width: 50%;
+  --container-height: 80%;
+  --container-height-small: 85%;
+  --container-padding: 3%;
+  --container-shadow: 0px 0px 20px #09beff;
+  --container-border-radius: 7%;
+
+  --bar-margin-top: 4%;
+  --bar-width: 100%;
+  --bar-cursor: pointer;
+
+  --media-font-size: 40px;
+  --media-padding-top: 2%;
+  --media-padding-left: 25%;
+
+  --controls-font-size: 50px;
+
+  --iconos-font-size: 30px;
+  --iconos-gap: 18px;
+  --iconos-cursor: pointer;
+
+  --volumen-margin-top: 2%;
+  --volumen-padding-left: 5%;
+
+  --list-width: 60%;
+  --list-width-small: 74%;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -13,21 +49,21 @@ body {
   justify-content: center;
   align-items: center;
   margin: 0;
-  font-family: 'IBM Plex Mono';
-  font-size: 20px;
+  font-family: var(--main-font);
+  font-size: var(--font-size);
 }
 
 .container {
-  width: 50%;
-  height: 80%;
+  width: var(--container-width);
+  height: var(--container-height);
   display: flex;
   flex-direction: column;
   align-content: center;
   justify-content: center;
   align-items: center;
-  padding: 3%;
-  box-shadow: 0px 0px 20px #09beff;
-  border-radius: 7%;
+  padding: var(--container-padding);
+  box-shadow: var(--container-shadow);
+  border-radius: var(--container-border-radius);
 }
 
 header {
@@ -38,6 +74,9 @@ header {
   justify-content: space-between;
 }
 
+h1{
+  margin-bottom: 10% ;
+}
 .imagenArtista {
   height: 300px;
   width: 300px;
@@ -48,14 +87,17 @@ header {
   box-shadow: 0px 0px 7px 2px #09beff;
 }
 
+h2{
+  margin-top: 10%;
+}
 .barra {
-  margin-top: 4%;
+  margin-top: var(--bar-margin-top);
 }
 
 .barra,
 .barraVolumen {
-  width: 100%;
-  cursor: pointer;
+  width: var(--bar-width);
+  cursor: var(--bar-cursor);
 }
 
 .tiempos {
@@ -72,27 +114,27 @@ header {
   flex-wrap: wrap;
   padding-bottom: 9%;
   justify-content: center;
-  font-size: 30px;
-  gap: 18px;
+  font-size: var(--iconos-font-size);
+  gap: var(--iconos-gap);
   width: 100%;
   height: 0;
 }
 
 .iconos>p {
-  cursor: pointer;
+  cursor: var(--iconos-cursor);
 }
 
 .media {
   display: flex;
-  font-size: 40px;
+  font-size: var(--media-font-size);
   align-items: center;
-  padding-top: 2%;
-  padding-left: 25%;
+  padding-top: var(--media-padding-top);
+  padding-left: var(--media-padding-left);
 }
 
 .controles {
   display: flex;
-  font-size: 50px;
+  font-size: var(--controls-font-size);
   justify-content: center;
   align-content: center;
   align-items: center;
@@ -101,16 +143,16 @@ header {
 .volumen {
   display: flex;
   align-items: center;
-  margin-top: 2%;
-  padding-left: 5%;
+  margin-top: var(--volumen-margin-top);
+  padding-left: var(--volumen-padding-left);
 }
 
 .song-list-container {
-  margin-top: 2%;
+  margin-top: var(--bar-margin-top);
 }
 
 .lista {
-  width: 60%;
+  width: var(--list-width);
 }
 
 /* Estilos para la lista de canciones */
@@ -174,13 +216,12 @@ header {
   cursor: pointer;
 }
 
-
-
 .rotating {
   animation: spin 10s linear infinite;
 }
 
-@media (max-height: 768px) {
+
+@media (max-height: 769px) {
   body {
     height: 100vh;
     background-size: cover;
