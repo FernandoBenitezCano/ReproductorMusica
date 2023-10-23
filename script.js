@@ -223,6 +223,11 @@ function toggleRandom() {
     if (isRandom) {
         randomButton.style.color = "#FF11A0";
         playRandomSong();
+        // Desactiva el modo de bucle
+        isLooping = false;
+        audioPlayer.loop = isLooping;
+        loopButton.classList.remove("active");
+        loopButton.style.color = "";
     } else {
         randomButton.style.color = "";
     }
@@ -236,6 +241,10 @@ function toggleLoop() {
 
     if (isLooping) {
         loopButton.style.color = "#FF11A0";
+        // Desactiva el modo aleatorio
+        isRandom = false;
+        randomButton.classList.remove("active");
+        randomButton.style.color = "";
     } else {
         loopButton.style.backgroundColor = "";
         loopButton.style.color = "";
