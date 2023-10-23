@@ -96,7 +96,7 @@ function toggleMute() {
     if (isMuted) {
         audioPlayer.volume = 0.1;
         volumeSlider.value = 10;
-        volumeButton.className = "bx bxs-volume-full";
+        volumeButton.className = "bx bxs-volume";
     } else {
         audioPlayer.volume = 0;
         volumeSlider.value = 0;
