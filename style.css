@@ -7,6 +7,8 @@
   --main-font: 'IBM Plex Mono', sans-serif;
   --font-size: 20px;
   --font-size-small: 15px;
+  --main-height-width:250px;
+  --margin-artist-song: 10%;
 
   --container-width: 50%;
   --container-height: 80%;
@@ -75,11 +77,11 @@ header {
 }
 
 h1{
-  margin-bottom: 10% ;
+  margin-bottom: var(--margin-artist-song);
 }
 .imagenArtista {
-  height: 300px;
-  width: 300px;
+  height: var(--main-height-width);
+  width: var(--main-height-width);
   border-radius: 50%;
   background-repeat: no-repeat;
   background-size: cover;
