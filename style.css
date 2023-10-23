@@ -85,8 +85,7 @@ h1{
   border-radius: 50%;
   background-repeat: no-repeat;
   background-size: cover;
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
-  box-shadow: 0px 0px 7px 2px #09beff;
+  box-shadow: 0px 0px 16px 4px #007bff;
 }
 
 h2{
